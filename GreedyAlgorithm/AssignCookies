@@ -1,0 +1,16 @@
+class Solution {
+    public int findContentChildren(int[] g, int[] s) {
+        Arrays.sort(g); //1 2 3
+        Arrays.sort(s); //1 1
+        int i = 0; //g pointer(children)
+        int j = 0; //s pointer(cookies)
+        while(j<s.length && i<g.length
+        ){
+            if(g[i]<=s[j]){
+                i++;
+            }
+            j++;
+        }
+        return i;
+    }
+}
